@@ -16,11 +16,11 @@ void TrojanPluginKernelLogger(const std::string &str, Log::Level)
 
 void TrojanPluginAddSentAmout(unsigned long s)
 {
-    sentSize += s;
+    // sentSize += s;
 }
 void TrojanPluginAddRcvdAmout(unsigned long v)
 {
-    rcvdSize += v;
+    // rcvdSize += v;
 }
 
 TrojanKernel::TrojanKernel(QObject *parent) : Qv2rayPlugin::QvPluginKernel(parent), thread(this)
