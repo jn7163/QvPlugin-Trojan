@@ -11,7 +11,7 @@ TrojanKernelThread *TrojanKernelThread::self = nullptr;
 
 void TrojanPluginKernelLogger(const std::string &str, Log::Level)
 {
-    TrojanKernelThread::self->OnKernelLogAvaliable_s(QString::fromStdString(str));
+    //TrojanKernelThread::self->OnKernelLogAvaliable_s(QString::fromStdString(str));
 }
 
 void TrojanPluginAddSentAmout(unsigned long s)
@@ -47,7 +47,7 @@ void TrojanKernel::timerEvent(QTimerEvent *event)
 {
     if (event->timerId() == statsTimerId)
     {
-        emit OnKernelStatsAvailable(rcvdSize.exchange(0), sentSize.exchange(0));
+        //emit OnKernelStatsAvailable(rcvdSize.exchange(0), sentSize.exchange(0));
     }
     QObject::timerEvent(event);
 }
